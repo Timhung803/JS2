@@ -97,3 +97,20 @@ console.log(circle1);
 const circle2 = createCircle(2);
 console.log(circle2);
 circle1.draw();
+
+// Constructor Function
+// Camel Notation: oneTwoThreeFour (Factory Function)
+// Pascal Notation: OneTwoThreeFour (Constructor Function)
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw');
+    } 
+}
+
+const circle = new Circle(1);
+console.log(circle.radius);
+const circle3 = new Circle(2);
+console.log(circle3.radius);
+// circle3.draw();
+console.log(circle3.draw);
