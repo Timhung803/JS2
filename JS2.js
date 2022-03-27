@@ -126,12 +126,26 @@ const person= {
         const parts = value.split(' ');
         this.firstName = parts[0];
         this.lastName = parts[1];
+    },
+    country: 'China',
+    city: 'HK',
+    get location() {
+        return `${person.country} ${person.city}`;
+    },
+    set location(value) {
+        const parts = value.split(' ');
+        this.country = parts[0];
+        this.city = parts[1];
     }
+
 };
 // getters => access properties
 // setters => change (mutate) them
 
 person.fullName = 'John Smith';
+person.fullName = 'Haruka Ichinose';
+person.location = 'Japan Yokohama';
 
 console.log(person);
 // console.log(`${person.firstName} ${person.lastName}`);
+
