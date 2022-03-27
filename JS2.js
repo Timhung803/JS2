@@ -113,4 +113,25 @@ console.log(circle.radius);
 const circle3 = new Circle(2);
 console.log(circle3.radius);
 // circle3.draw();
-console.log(circle3.draw);
+// console.log(circle3.draw);
+
+// Getting & Setter
+const person= {
+    firstName: 'Tim',
+    lastName: 'H',
+    get fullName() {
+        return `${person.firstName} ${person.lastName}`;
+    },
+    set fullName(value) {
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+};
+// getters => access properties
+// setters => change (mutate) them
+
+person.fullName = 'John Smith';
+
+console.log(person);
+// console.log(`${person.firstName} ${person.lastName}`);
