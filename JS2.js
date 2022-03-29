@@ -175,3 +175,48 @@ function increase(obj) {
 
 increase(obj);
 console.log(obj);
+
+// local vs Global
+
+const color = 'red';
+function start() {
+    const message1 = 'hi';
+    const color = 'blue';
+    console.log(color);
+    // if (true) {
+    //     const another1 = 'bye';
+    // }
+    // // console.log(another1);    
+    // for (let i = 0; i < 5; i++) {
+    //     console.log(i);
+    // }
+    // console.log(i);
+}
+
+function stop() {
+    const message1 = 'bye';
+}
+
+start();
+// console.log(message1);
+
+// exercise - value type vs reference type
+
+function square(number) {
+    return number * number;
+}
+
+const myNumber = 3;
+console.log(square(myNumber));   // Expects 9
+console.log(myNumber);   // Expects 3
+
+
+function squareNumbers(numArray) {
+    for (let i = 0; i < numArray.length; i++) {
+        numArray[i] = numArray[i] * numArray[i];
+    }
+}
+
+const myNumArray = [3, 1, 5, 7, 2];
+squareNumbers(myNumArray);
+console.log(myNumArray); 
