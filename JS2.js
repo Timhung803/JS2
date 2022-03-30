@@ -220,3 +220,27 @@ function squareNumbers(numArray) {
 const myNumArray = [3, 1, 5, 7, 2];
 squareNumbers(myNumArray);
 console.log(myNumArray); 
+
+// let vs. var
+
+function start() {
+    for (var i = 0; i < 5; i++)
+    // console.log(i);
+    if (true) {
+        let color4 = 'white';
+    }
+//     console.log(i);
+        console.log(color4);
+}
+
+// var
+// ES6 (ES2015): let, const => block-scoped
+
+start();
+
+var color6 = 'red';
+let age = 30;
+
+function sayHi() {
+    console.log('hi');
+}
