@@ -230,7 +230,7 @@ function start() {
         let color4 = 'white';
     }
 //     console.log(i);
-        console.log(color4);
+        // console.log(color4);
 }
 
 // var
@@ -244,3 +244,24 @@ let age = 30;
 function sayHi() {
     console.log('hi');
 }
+
+// Cloning an Object
+
+const circle4 = {
+    radius: 1,
+    // color: 'gold',
+    draw() {
+        console.log('draw');
+    }
+};
+
+// const another2 = {};
+// for(let key in circle4)
+//     another2[key] = circle4[key];
+
+// const another2 = Object.assign({
+    //     color: 'gold'
+    // }, circle4);
+    
+    const another2 = {color: 'gold', ...circle4};
+console.log(another2);
