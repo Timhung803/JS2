@@ -265,3 +265,41 @@ const circle4 = {
     
     const another2 = {color: 'gold', ...circle4};
 console.log(another2);
+
+// this keyword
+
+// method -> obj
+// function - global (window, global)
+
+const video = {
+    title:'a',
+    tags: ['a', 'b', 'c'],
+    showTags() {
+        this.tags.forEach(function(tag) {
+            console.log(this.title,tag);
+        }, this);
+    }
+    // play() {
+    //     console.log(this);
+    // }
+};
+video.showTags();
+
+// function Video(title) {
+//     this.title = title;
+//     console.log(this);
+// }
+
+// const v = new Video('b');
+
+// function playVideo() {
+//     console.log(this);
+// }
+
+// playVideo();
+// video.stop = function() {
+//     console.log(this);
+// };
+
+// video.stop();
+// video.play();
