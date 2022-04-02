@@ -285,21 +285,58 @@ const video = {
 };
 video.showTags();
 
+
 // function Video(title) {
-//     this.title = title;
-//     console.log(this);
-// }
+    //     this.title = title;
+    //     console.log(this);
+    // }
+    
+    // const v = new Video('b');
+    
+    // function playVideo() {
+        //     console.log(this);
+        // }
+        
+        // playVideo();
+        // video.stop = function() {
+            //     console.log(this);
+            // };
+            
+            // video.stop();
+            // video.play();
+    
+ // Javascript Templete literals
 
-// const v = new Video('b');
+//  String prmitive
+const message2 = 'This is my\n' + 'first message';
 
-// function playVideo() {
-//     console.log(this);
-// }
+// Object {}
+// Boolean true, false
+// String '', ""
+// Template ``
 
-// playVideo();
-// video.stop = function() {
-//     console.log(this);
-// };
+const name4 = 'Haruka';
+const another3 = 
+// `This is my 
+// 'first' message`;
+`Hi ${name4} ${3+3}, 
 
-// video.stop();
-// video.play();
+Thank you for joining my mailing list.
+
+Regards,
+Tim`;
+
+console.log(another3);
+
+const name6 = 'Haruka';
+const yellowCard = 0
+const message3 = 
+`Hi ${name6} 
+
+Your yellow card is cancelled, so the total number of yellow cards is ${yellowCard}
+
+Regards,
+Tim`;
+
+console.log(message3);
+
