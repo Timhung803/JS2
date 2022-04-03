@@ -328,6 +328,7 @@ Tim`;
 
 console.log(another3);
 
+
 const name6 = 'Haruka';
 const yellowCard = 0
 const message3 = 
@@ -340,3 +341,21 @@ Tim`;
 
 console.log(message3);
 
+// JavaScript Array Filter
+
+const numbers = [1, -1, 2, 3];
+
+// const filtered = numbers.filter(function(value) {
+//     return value >= 0;
+// });
+
+const filtered = numbers.filter(n => n >= 0);
+
+console.log(filtered);
+
+// Exercise
+const openTime = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+const filteredMorning = openTime.filter(hour => hour >= 6 && hour <=12);
+
+console.log(filteredMorning);
