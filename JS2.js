@@ -359,3 +359,50 @@ const openTime = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const filteredMorning = openTime.filter(hour => hour >= 6 && hour <=12);
 
 console.log(filteredMorning);
+
+// tomorrow practice open and close time
+
+// Javascript Array Map
+const numbers1 = [1, -1, 2, 3];
+
+// const filtered1 = numbers1.filter(n => n >=0);
+
+// const items = filtered1.map(n => '<li>' + n + '</il>');
+// const html = '<ul>' + items.join('') + '</ul>';
+
+// const items = filtered1.map(n => {
+//     const obj = { value:n};
+//     return obj;
+// });
+
+// const items = filtered1.map(n => ({value:n}));
+
+const items = numbers1
+    .filter(n => n >=0)
+    .map(n => ({value:n}))
+    .filter(obj => obj.value > 1)
+    .map(obj => obj.value);
+
+console.log(items);
+
+// Exercise
+const openTime1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+const openClose = openTime1
+    .filter(n => n > 6 && n < 12)
+    .map(k => 'Open');
+        
+    //     ({value: n}))
+    // .filter(obj => obj.value > 6 && obj.value < 12)
+    // .map(obj => obj = 'Open');
+
+const openClose2 = openTime1
+    .map(hour => {
+        if (hour > 6 && hour < 12) return `Open at ${hour} o'clock`;
+        else return `Closed at ${hour} o'clock`; 
+    })
+
+console.log(openClose);
+console.log(openClose2);
+
+
