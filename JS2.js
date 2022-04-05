@@ -390,7 +390,7 @@ const openTime1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const openClose = openTime1
     .filter(n => n > 6 && n < 12)
-    .map(k => 'Open');
+    .map(n => 'Open');
         
     //     ({value: n}))
     // .filter(obj => obj.value > 6 && obj.value < 12)
@@ -405,4 +405,19 @@ const openClose2 = openTime1
 console.log(openClose);
 console.log(openClose2);
 
+// Javascrip Array Reduce
 
+const numbers2 = [1, -1, 2, 3];
+
+// let sum = 0;
+
+// for (let n of numbers2)
+//     sum += n;
+
+// const sum = numbers2.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+// }, 0);
+
+const sum = numbers2.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+console.log(sum);
